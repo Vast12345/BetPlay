@@ -14,10 +14,6 @@ public class Jugador {
     private List<Lesion> lstLesiones;
     private List<Rendimiento> lstRendimientos;
     public Jugador() {
-        
-    }
-
-    public Jugador() {
         lstLesiones = new ArrayList<Lesion>();
         lstRendimientos = new ArrayList<Rendimiento>();
     }
@@ -56,6 +52,12 @@ public class Jugador {
     }
     public void setNumeroCamiseta(int numeroCamiseta) {
         this.numeroCamiseta = numeroCamiseta;
+    }
+    public Equipo getEquipo() {
+        return equipo;
+    }
+    public void setEquipo (Equipo equipo) {
+        this.equipo = equipo;
     }
     public List<Lesion> getLstLesiones() {
         return lstLesiones;

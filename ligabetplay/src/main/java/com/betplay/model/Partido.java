@@ -16,10 +16,6 @@ public class Partido {
     private List<Tarjeta> lstTarjetas;
     private Resultado resultado;
     public Partido() {
-
-    }
-
-    public Partido() {
         lstGoles = new ArrayList<Gol>();
         lstTarjetas = new ArrayList<Tarjeta>();
     }

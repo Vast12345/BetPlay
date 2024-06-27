@@ -12,10 +12,6 @@ public class Equipo {
     private List<Jugador> lstJugadores;
     private List<Partido> lstPartidos;
     public Equipo() {
-        
-    }
-
-    public Equipo() {
         lstJugadores = new ArrayList<Jugador>();
         lstPartidos = new ArrayList<Partido>();
     }
@@ -37,7 +33,7 @@ public class Equipo {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
-    public String getEstadio() {
+    public Estadio getEstadio() {
         return estadio;
     }
     public void setEstadio(Estadio estadio) {
