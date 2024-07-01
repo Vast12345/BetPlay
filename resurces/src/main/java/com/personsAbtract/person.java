@@ -64,6 +64,10 @@ public class person{
     public void setNombreRol(Rol_Person nombreRol) {
         this.nombreRol = nombreRol;
     }
+
+    public void callRol(){
+        System.out.println(nombreRol.decirRol());
+    }
     
     
 
