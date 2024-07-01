@@ -1,27 +1,42 @@
 package com.pruebasbetplay;
-
 import java.util.Hashtable;
-import java.util.Map;
 
-import com.personsAbtract.equipo;
-import com.personsAbtract.person;
+
 
 public class Handle_Global_Temas {
-    private  static  Handle_Global_Temas instancia;
-    Hashtable<int, equipo> Team = new Hashtable<>();    
+    private  static  Handle_Global_Temas instance;
+    private final Hashtable<String, String> Global;
 
 
-    public  handleTeam(){
-        equipos = new Hashtable<>();
-        jugadores = new Hashtable<>();
-
-
+    Handle_Global_Temas(){
+        Global = new Hashtable<>();
     }
-    public static synchronized Handle_Global_Temas getInstancia() {
-        if (instancia == null) {
-            instancia = new Handle_Global_Temas();
+    public static synchronized Handle_Global_Temas getInstance() {
+        if (instance == null) {
+            instance = new Handle_Global_Temas();
         }
-        return instancia;
+        return instance;
+    }
+
+    public void put(String key, String value){
+        Global.put(key, value);
+    }
+
+    public String get(String key){
+        return Global.get(key);
+    }
+
+    public void remove(String Key){
+        Global.remove(Key);
+    }
+
+    public void actualizar(String key, String newValue) {
+        if (Global.containsKey(key)) {
+            Global.put(key, newValue);
+            System.out.println("Actualizado");
+        } else {
+            System.out.println("Clave no encontrada");
+        }
     }
     
 

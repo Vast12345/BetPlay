@@ -8,7 +8,7 @@ public class person{
     private String contacto;
     private Rol_Person nombreRol;
 
-    public person(String Apellido, String Nombre, String contacto, String dni, String edad, Rol_Person nombreRol) {
+    public person() {
         this.Apellido = Apellido;
         this.Nombre = Nombre;
         this.contacto = contacto;

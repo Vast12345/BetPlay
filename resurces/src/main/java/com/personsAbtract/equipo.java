@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class equipo {
+    
     private String id;
     private String nombre;
-    private final List<person> jugadores;
+    private final List<player> jugadores;
 
 
     public equipo(String id, List<person> jugadores, String nombre) {
@@ -31,18 +32,15 @@ public class equipo {
         this.nombre = nombre;
     }
 
-    public List<person> getJugadores() {
+    public List<player> getJugadores() {
         return jugadores;
     }
 
-    public void setJugadores(person jugadores) {
+    public void setJugadores(player jugadores) {
         this.jugadores.add(jugadores);
     }
     
 
-    public void showPlayerTeam(){
-        for (person jugador : jugadores) {
-            System.out.println("Player ID : " + jugador.getDni() + "Nombre : " + jugador.getNombre() + "Apellido : " + jugador.getApellido() + "Edad : " + jugador.getEdad() + "Contacto : " + jugador.getContacto());
-        }
-    }
+    
+    
 }
