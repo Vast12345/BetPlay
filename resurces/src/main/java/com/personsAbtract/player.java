@@ -15,14 +15,25 @@ public class player extends person {
     }
 
 
-    
-    public player( String lesionesDesc, String nacionalidad, String numeroCamiseta, String posicion, String Apellido, String Nombre, String contacto, String dni, String edad, Rol_Person nombreRol) {
-        super();
-        this.lesionesDesc = lesionesDesc;
+    public player(String posicion, String nacionalidad, String numeroCamiseta, String lesionesDesc) {
+        this.posicion = posicion;
         this.nacionalidad = nacionalidad;
         this.numeroCamiseta = numeroCamiseta;
-        this.posicion = posicion;
+        this.lesionesDesc = lesionesDesc;
     }
+    
+    public player(String Nombre, String Apellido, String contacto, String dni, Rol_Person nombreRol, String edad,
+            String posicion, String nacionalidad, String numeroCamiseta, String lesionesDesc) {
+        super(Nombre, Apellido, contacto, dni, nombreRol, edad);
+        this.posicion = posicion;
+        this.nacionalidad = nacionalidad;
+        this.numeroCamiseta = numeroCamiseta;
+        this.lesionesDesc = lesionesDesc;
+    }
+
+
+
+
 
     public String getPosicion() {
         return posicion;
